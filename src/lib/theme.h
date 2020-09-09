@@ -339,6 +339,8 @@ public:
     /**
      * Returns if there is a TextStyle override of a specific "itemData" with attributeName
      * in the syntax definition called definitionName.
+     *
+     * @since 5.75
      */
     bool hasTextStyleOverride(const QString &definitionName, const QString &attributeName) const;
 
