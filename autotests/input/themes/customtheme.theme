@@ -42,5 +42,12 @@
         "TemplateFocusedPlaceholder" : "#76da98",
         "TemplateReadOnlyPlaceholder" : "#f6e6e6",
         "WordWrapMarker" : "#ededed"
+    },
+    "custom-styles": {
+        "SomeDefinition" : {
+            "SomeAttribute" : {
+                "text-color" : "#deadbe"
+            }
+        }
     }
 }

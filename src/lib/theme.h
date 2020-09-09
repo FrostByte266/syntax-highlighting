@@ -336,6 +336,12 @@ public:
      */
     QRgb editorColor(EditorColorRole role) const;
 
+    /**
+     * Returns if there is a TextStyle override of a specific "itemData" with attributeName
+     * in the syntax definition called definitionName.
+     */
+    bool hasTextStyleOverride(const QString &definitionName, const QString &attributeName) const;
+
 private:
     /**
      * Constructor taking a shared ThemeData instance.

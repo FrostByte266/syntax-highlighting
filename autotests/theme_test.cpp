@@ -78,6 +78,11 @@ private Q_SLOTS:
                 highlighter.setDefinition(m_repo.definitionForFileName(inFile));
                 highlighter.setOutputFile(outFile);
                 highlighter.highlightFile(inFile);
+            } else {
+                // ensure the text style override for test theme is OK
+                QVERIFY(theme.hasTextStyleOverride(QStringLiteral("SomeDefinition"), QStringLiteral("SomeAttribute")));
+                QVERIFY(!theme.hasTextStyleOverride(QStringLiteral("SomeOtherDefinition"), QStringLiteral("SomeAttribute")));
+                QVERIFY(!theme.hasTextStyleOverride(QStringLiteral("SomeDefinition"), QStringLiteral("SomeOtherAttribute")));
             }
         }
     }

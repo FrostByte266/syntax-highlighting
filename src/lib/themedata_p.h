@@ -124,6 +124,12 @@ public:
      */
     TextStyleData textStyleOverride(const QString &definitionName, const QString &attributeName) const;
 
+    /**
+     * Returns if there is a TextStyle override of a specific "itemData" with attributeName
+     * in the syntax definition called definitionName.
+     */
+    bool hasTextStyleOverride(const QString &definitionName, const QString &attributeName) const;
+
 private:
     int m_revision = 0;
     QString m_name;

@@ -104,3 +104,8 @@ QRgb Theme::editorColor(EditorColorRole role) const
 {
     return m_data ? m_data->editorColor(role) : 0;
 }
+
+bool Theme::hasTextStyleOverride(const QString &definitionName, const QString &attributeName) const
+{
+    return m_data ? m_data->hasTextStyleOverride(definitionName, attributeName) : false;
+}

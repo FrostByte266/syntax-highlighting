@@ -245,3 +245,12 @@ TextStyleData ThemeData::textStyleOverride(const QString &definitionName, const 
 {
     return m_textStyleOverrides.value(definitionName).value(attributeName);
 }
+
+bool ThemeData::hasTextStyleOverride(const QString &definitionName, const QString &attributeName) const
+{
+    const auto defIt = m_textStyleOverrides.constFind(definitionName);
+    if (defIt == m_textStyleOverrides.constEnd()) {
+        return false;
+    }
+    return defIt.value().constFind(attributeName) != defIt.value().constEnd();
+}
